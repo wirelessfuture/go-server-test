@@ -16,6 +16,7 @@ func (db dataBase) products(w http.ResponseWriter, req *http.Request) {
 	case "DELETE":
 		db.delete(w, req)
 	default:
+		w.WriteHeader(http.StatusMethodNotAllowed)
 		fmt.Fprintf(w, "Method not allowed")
 	}
 }

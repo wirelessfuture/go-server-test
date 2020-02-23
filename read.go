@@ -10,7 +10,7 @@ func (db dataBase) read(w http.ResponseWriter, req *http.Request) {
 	item := req.URL.Query().Get("item")
 
 	if item == "" {
-		w.WriteHeader(http.StatusNotFound)
+		w.WriteHeader(http.StatusBadRequest)
 		fmt.Fprintf(w, "improper query")
 		return
 	}
