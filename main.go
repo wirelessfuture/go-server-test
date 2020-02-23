@@ -10,7 +10,7 @@ import (
 type dataBase map[string]float64
 
 var (
-	serverAddress = "192.168.0.18:3000"
+	serverAddress = "192.168.0.18:8080"
 	mu            sync.Mutex
 	db            = dataBase{"shoes": 50, "socks": 5}
 )
